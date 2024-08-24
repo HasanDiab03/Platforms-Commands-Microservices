@@ -1,1 +1,54 @@
 Notes.txt
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# Logs
+*.log
+logs/
+
+# VS Code directories
+.vscode/
+
+# Rider project files
+.idea/
+
+# ASP.NET Core Environment Files
+.env
+.env.*
+
+# macOS-specific files
+.DS_Store
+
+# Generated code and cache
+Generated/
+.cache/
+.cache-loader/
+node_modules/
+
+# npm and yarn specific
+package-lock.json
+yarn.lock
+
+# Dependencies from npm (if using frontend code)
+node_modules/
+
+# Visual Studio Code settings (optional)
+.vscode/
+
+# ASP.NET Secret Manager files
+*.secrets.json
+
+# Configuration transformation output
+*.Transform.config
+
+# JetBrains Rider and ReSharper directories
+.idea/
+*.sln.iml
