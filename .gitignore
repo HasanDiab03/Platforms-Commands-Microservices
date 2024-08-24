@@ -1,54 +1,32 @@
-Notes.txt
+# Ignore bin and obj folders in all projects inside src
+src/**/bin/
+src/**/obj/
+src/**/out/
 
-# Ignore build output
-bin/
-obj/
-out/
-
-# User-specific files
-*.user
-*.rsuser
-*.suo
+# Ignore user-specific and IDE files
+src/**/*.user
+src/**/*.rsuser
+src/**/*.suo
 
 # Logs
-*.log
-logs/
+src/**/*.log
+src/**/logs/
 
-# VS Code directories
-.vscode/
+# Ignore Rider and VSCode settings
+src/**/.idea/
+src/**/.vscode/
 
-# Rider project files
-.idea/
+# ASP.NET Core Secret Manager files
+src/**/*.secrets.json
 
-# ASP.NET Core Environment Files
-.env
-.env.*
+# Environment-specific files
+src/**/.env
+src/**/.env.*
 
-# macOS-specific files
-.DS_Store
+# Optional: Ignore node_modules if you have frontend code in the same structure
+src/**/node_modules/
 
-# Generated code and cache
-Generated/
-.cache/
-.cache-loader/
-node_modules/
+# Ignore macOS system files
+src/**/.DS_Store
 
-# npm and yarn specific
-package-lock.json
-yarn.lock
-
-# Dependencies from npm (if using frontend code)
-node_modules/
-
-# Visual Studio Code settings (optional)
-.vscode/
-
-# ASP.NET Secret Manager files
-*.secrets.json
-
-# Configuration transformation output
-*.Transform.config
-
-# JetBrains Rider and ReSharper directories
-.idea/
-*.sln.iml
+Notes.txt
