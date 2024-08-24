@@ -1,0 +1,62 @@
+Microservices:
+    Microservices are responsible for doing 1 thing, and doing it well. They are small, typically should require a small team and a small amount of time to be built.
+    Let's take for example a monolithic CRM system:
+        - very difficult to 'change' the system"
+            - changes cycles takes months or years in duration
+            - massive of amounts of mostly manual tests.
+        - difficult to scale:
+            - imaging having for example a black friday, and you just need to scale the ordering part of the app, you can't. you would have to scale the whole app since it's one chunk of code base (monolithic).
+        - locked In: in terms of technology stack and third party managers
+    So the benefits of Microservices:
+        - easier to change & deploy since they are small and decoupled.
+        - can be built using different technologies
+        - increased organizational ownership & alignmet, as each department in the organization owns the part of the system related to it.
+        - reselience, as in 1 service can break, while others can continue to run.
+        - scalable, you can scale out only the services that need to be scaled.
+        - built to be highly replaceable / swappble.
+    
+    An Example of a Microservices App:
+        An airline decided to go with this architechure, so it has:
+            - Flight Catalog Service (.Net & 1 SQL Server instance & team in scotland)
+            - Booking Service (Ruby On Rails & 1 PostgreSQL instance & team in USA)
+            - Check in service (Node & 1 MongoDb instance & team in india)
+        the point is that these services shouldn't share the same DB, but will share data between them (which will be coming up later), and if one of these services breaks down, you can still use the others (for example the check in service may go down, but you can still look at the flight catalog and book, just can't check in).
+
+    Microservices are not all sunshine and rainbows, and monoliths still have there use cases:
+        - Microservices: are difficult to implement, need a strong domain knowledge to break down services, and as they are distributed they heavily rely on networks which can slow down and even fail, and even tho we say they are decoupled they are still coupled to something as a microservice that isn't talking to anything is probably not an actual microservice.
+        - Monoliths: simpler to implement, can use CI/CD and daily deploys for small changes, it allows you to familiarize yourself with the domain as a whole, and they are not as relining on networks as microservices are.
+
+    Solutions Architechure:
+        - In our App, we will be having 2 services:
+            - Platform Service with it's own SQL Server (REST API as the interface of it)
+            - Command Service with In Memory DB (REST API as the interface of it)
+        the End user will be communcating to an API Gateway component instead of directly to one of the services.
+        an API Gateway handles routing to specific services, as well as more sophisticated features like rate limiting, authentication, validation, logging, and versioning. it is used to manage and secure API traffic to backend services.
+        
+        As of write now, what we have is not exactly a microservices architechure, as the 2 services are not aware of each other at all, and don't communicate whatsoever, which is not right since the command service does need data from the platform one.
+        1 approach to solve this is using an http client from the platform service to post for example to the command service, but this does create a coupled approach as the platform service has to know where the command platform sits.
+        Our Approach will be using asynchronous messaging using RabbitMQ, so the platfrom service will publish an event to the event bus (RabbitMQ) without having to be aware of the command service, while the command service (Subscriber) will receive the message from the event 
+        
+        In addition , we will be using gRPC, as data might be lost frequently, we need to make sure that the command service is up to date with the platform service, so we can use gRPC to fetch all platforms that the command doesn't already have. note that by using gRPC we are kinda coupling the 2 services together. 
+
+        When using a message bus like RabbitMQ to communicate between microservices, there can still be scenarios where microservices are not fully synchronized or up to date with each other regarding data. Some common reasons include:
+
+        When using a message bus like RabbitMQ to communicate between microservices, there can still be scenarios where microservices are not fully synchronized or up to date with each other regarding data. Some common reasons include:
+            1. Message Delivery Delays:
+            Network Latency: Messages between microservices might experience delays due to network congestion, routing issues, or latency, resulting in one microservice not receiving updates in real time.
+            Message Queuing: If a microservice is slow to process messages, they may accumulate in the queue, causing delays in updates being propagated.
+            2. Message Loss:
+            Non-Persistent Messages: If messages are not configured to be persistent, they may be lost due to broker crashes, leading to missed updates.
+            Consumer Failures: A microservice that fails to acknowledge a message or experiences downtime during message processing may miss an update.
+
+        Eventual Consistency:
+            Asynchronous Nature: By design, message-based systems often embrace eventual consistency. This means microservices might not have up-to-date data immediately after a change but will eventually reach consistency. This temporary state of inconsistency is expected in such architectures.
+            Trade-Offs: Depending on the business logic and data flows, some services may prioritize availability over immediate consistency, leading to temporary data mismatches.
+        
+    Platform Service Architechure:
+        - We will have both external and internal interfaces:
+            - External: the controller, which will accepted synchronized REST based request to the Platform service.
+            - Internal: GRPC Server (synchronized - in (requests from command service)), Message Bus (Asynchronous - out (Publisher)), HTTP Client (demonstration of this approach, synchronized - out).
+    Command Service Architechure:
+        - External: the controller, which will accepted synchronized REST based request to the Platform service.
+        - Internal: GRPC Client (synchronized - out (requests to platform service)), Message Bus (Asynchronous - in (Subscriber)).

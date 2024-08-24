@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platforms
+spec:
+  replicas: 1
+  # the selector is used to actually select the template that will be used to create the pods
+  selector:
+    matchLabels:
+      app: platform-service
+      # the template is used to specify the image and other stuff that the pods of this deployment will use
+  template:
+    metadata:
+      labels:
+        app: platform-service
+    spec:
+      containers:
+        - name: platform-service
+          image: hasandiab/platformservice:v1
+          resources:
+            limits:
+              cpu: "1"
+              memory: "512Mi"
