@@ -137,3 +137,4 @@ C:\Users\dell\Desktop\Courses\Microservices\PlatformService\PlatformService\obj\
 C:\Users\dell\Desktop\Courses\Microservices\PlatformService\PlatformService\obj\Debug\net8.0\PlatformService.pdb
 C:\Users\dell\Desktop\Courses\Microservices\PlatformService\PlatformService\obj\Debug\net8.0\PlatformService.genruntimeconfig.cache
 C:\Users\dell\Desktop\Courses\Microservices\PlatformService\PlatformService\obj\Debug\net8.0\ref\PlatformService.dll
+C:\Users\dell\Desktop\Courses\Microservices\PlatformService\PlatformService\obj\Debug\net8.0\PlatformService.sourcelink.json

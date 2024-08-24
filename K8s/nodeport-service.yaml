@@ -1,15 +1,15 @@
 apiVersion: v1
-kinds: Service
+kind: Service
 metadata:
-  name: nodeport-service
+  name: nodeport
 spec:
   type: NodePort
   # selector is used to select the pods that this service will route traffic to
   selector:
     app: platform-service
   ports:
-    - name: platform-service
-      protocol: TCP
+    - protocol: TCP
       # port is the port that the service will listen on, and targetPort is the port that the service will route traffic to. so whenever we send traffic to port 8080 on this service, it will be routed to port 8080 on the pods that have the label app: platform-service
       port: 8080
       targetPort: 8080
+      nodePort: 32002
