@@ -1,38 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: platforms
+  name: commands
 spec:
   replicas: 1
-  # the selector is used to actually select the template that will be used to create the pods
   selector:
     matchLabels:
-      app: platform-service
-      # the template is used to specify the image and other stuff that the pods of this deployment will use
+      app: command-service
   template:
     metadata:
       labels:
-        app: platform-service
+        app: command-service
     spec:
       containers:
-        - name: platform-service
-          image: hasandiab/platformservice:latest
+        - name: command-service
+          image: hasandiab/commandservice:latest
           ports:
             - containerPort: 8080
           resources:
             limits:
               cpu: "1"
               memory: "512Mi"
+
 # defintion fo the clusterIP service of this deployment
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: platform-clusterip
+  name: command-clusterip
 spec:
   type: ClusterIP
   selector:
-    app: platform-service
+    app: command-service
   ports:
     - protocol: TCP
       port: 8080
