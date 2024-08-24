@@ -60,3 +60,16 @@ Microservices:
     Command Service Architechure:
         - External: the controller, which will accepted synchronized REST based request to the Platform service.
         - Internal: GRPC Client (synchronized - out (requests to platform service)), Message Bus (Asynchronous - in (Subscriber)).
+
+
+    Messaging:
+        - Synchronous Messaging:
+            in short, it's when a client that requests actually waits for the response. Synchronous services usually need to know about each other, which could become cubersome, especially if you you're relying on a bunch of external service (which might change locations).
+            now what if we use the 'async' keyword with Http Endpoints ? does that make it an asynchronous messaging ? No, since the 'async' keyword is more related to the management of threads internally of that service. in the context of messaging, a method marked with 'async' is still Synchronous, as the client still needs to wait for the response. All it does is free the thread so that other resources can use it, without blocking other stuff.
+
+            Synchronous communicate can and does happen between services, however it does lead to service being more coupled with each other, as well as potentially leading to something called Long Dependency Chains. Long Dependency Chains is basically when service A calls service B, and service B waits for service C and D, and service D waits for service E. as you can see, if there's a delay in one of those services, all other waiting services will be delayed, due to the large coupling between them.
+
+        - Asynchronous Messaging:
+            unlike with Synchronous messaging, here the requester does not wait for the response to finish. It's more like an Event model, for example something like a publish and subscribe event model. it is typically used between services, and utilizes event busses (such as RabbitMQ), so then services no longer need to know about each other, just the bus. The thing is tho, it is more complex than the Synchronous approach.
+
+            The Message bus could be considered a monolith in and of itself. We should treet the message bus with the upmost importance, the same way we do with networking, storage, power, etc... it is recommended to have a cluster of it, multiple instaces running at the same time in case one shuts down. also, services should usually implement some kind of retry policy, in case a message fails to be sent, the service should be smart enough to retry sending it again.  
