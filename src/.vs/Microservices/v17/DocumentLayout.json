@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\extensions\\servicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\extensions\\servicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\models\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\models\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\data\\databaseprep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\data\\databaseprep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\models\\platform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\models\\platform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\controllers\\platfromscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\controllers\\platfromscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "PlatformService\\appsettings.Production.json",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\appsettings.Production.json",
-              "RelativeToolTip": "PlatformService\\appsettings.Production.json",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAABqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-25T16:24:41.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DatabasePrep.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Data\\DatabasePrep.cs",
-              "RelativeDocumentMoniker": "PlatformService\\Data\\DatabasePrep.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Data\\DatabasePrep.cs",
-              "RelativeToolTip": "PlatformService\\Data\\DatabasePrep.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAQwA0AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:12:15.145Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1ce3aef-c78d-49ee-b72b-ec1fbc908313}"
@@ -72,28 +46,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Program.cs",
-              "RelativeDocumentMoniker": "PlatformService\\Program.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Program.cs",
-              "RelativeToolTip": "PlatformService\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "CommandService\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Data\\DataContext.cs",
+              "RelativeToolTip": "CommandService\\Data\\DataContext.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:12:12.619Z",
+              "WhenOpened": "2024-08-25T16:51:01.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicesExtension.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Extensions\\ServicesExtension.cs",
-              "RelativeDocumentMoniker": "PlatformService\\Extensions\\ServicesExtension.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Extensions\\ServicesExtension.cs",
-              "RelativeToolTip": "PlatformService\\Extensions\\ServicesExtension.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAABMAAAA",
+              "DocumentIndex": 2,
+              "Title": "Platform.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Models\\Platform.cs",
+              "RelativeDocumentMoniker": "CommandService\\Models\\Platform.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Models\\Platform.cs",
+              "RelativeToolTip": "CommandService\\Models\\Platform.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:11:11.618Z",
+              "WhenOpened": "2024-08-25T16:50:30.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Models\\Command.cs",
+              "RelativeDocumentMoniker": "CommandService\\Models\\Command.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Models\\Command.cs",
+              "RelativeToolTip": "CommandService\\Models\\Command.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T16:50:29.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlatfromsController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\PlatfromsController.cs",
+              "RelativeDocumentMoniker": "CommandService\\Controllers\\PlatfromsController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\PlatfromsController.cs",
+              "RelativeToolTip": "CommandService\\Controllers\\PlatfromsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T16:50:28.738Z",
               "EditorCaption": ""
             }
           ]

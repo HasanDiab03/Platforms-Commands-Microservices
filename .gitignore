@@ -32,3 +32,4 @@ src/**/.DS_Store
 Notes.txt
 
 src/**/*.bin
+src/**/*.vsidx
