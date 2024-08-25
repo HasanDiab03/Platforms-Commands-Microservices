@@ -23,6 +23,12 @@ spec:
             limits:
               cpu: "1"
               memory: "512Mi"
+          env:
+            - name: SA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mssql
+                  key: SA_PASSWORD
 # defintion fo the clusterIP service of this deployment
 ---
 apiVersion: v1

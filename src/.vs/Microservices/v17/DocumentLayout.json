@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\extensions\\servicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\extensions\\servicesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\data\\databaseprep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\data\\databaseprep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\platformservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1832FC84-56A7-4412-A99A-9EEBF3F5954E}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "PlatformService\\appsettings.Production.json",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\appsettings.Production.json",
+              "RelativeToolTip": "PlatformService\\appsettings.Production.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-25T16:24:41.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabasePrep.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Data\\DatabasePrep.cs",
+              "RelativeDocumentMoniker": "PlatformService\\Data\\DatabasePrep.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Data\\DatabasePrep.cs",
+              "RelativeToolTip": "PlatformService\\Data\\DatabasePrep.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwA0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T16:12:15.145Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1ce3aef-c78d-49ee-b72b-ec1fbc908313}"
@@ -26,6 +69,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Program.cs",
+              "RelativeDocumentMoniker": "PlatformService\\Program.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Program.cs",
+              "RelativeToolTip": "PlatformService\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T16:12:12.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServicesExtension.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Extensions\\ServicesExtension.cs",
+              "RelativeDocumentMoniker": "PlatformService\\Extensions\\ServicesExtension.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\PlatformService\\Extensions\\ServicesExtension.cs",
+              "RelativeToolTip": "PlatformService\\Extensions\\ServicesExtension.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T16:11:11.618Z",
+              "EditorCaption": ""
             }
           ]
         },

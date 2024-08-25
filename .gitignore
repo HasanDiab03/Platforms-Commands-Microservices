@@ -30,3 +30,5 @@ src/**/node_modules/
 src/**/.DS_Store
 
 Notes.txt
+
+src/**/*.bin

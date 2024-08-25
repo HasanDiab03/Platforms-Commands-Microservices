@@ -1,14 +1,28 @@
-﻿using PlatformService.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PlatformService.Models;
 
 namespace PlatformService.Data
 {
 	public static class DatabasePrep
 	{
-		public static void PrepareDatabase(this WebApplication app)
+		public static void PrepareDatabase(this WebApplication app, IWebHostEnvironment env)
 		{
 			using var scope = app.Services.CreateScope();
 			var services = scope.ServiceProvider;
 			var dbContext = services.GetRequiredService<DataContext>();
+			if(env.IsProduction())
+			{
+				Console.WriteLine("--> Applying Pending Migrations");
+				try
+				{
+					dbContext.Database.Migrate();
+					Console.WriteLine("--> Succesfully applied migrations");
+				}
+				catch (Exception ex) 
+				{
+					Console.WriteLine($"Failed to apply migrations, {ex.Message}");
+				}
+			}
 			SeedData(dbContext);
 		}
 		private static void SeedData(DataContext context)
