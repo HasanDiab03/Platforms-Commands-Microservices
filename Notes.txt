@@ -73,3 +73,10 @@ Microservices:
             unlike with Synchronous messaging, here the requester does not wait for the response to finish. It's more like an Event model, for example something like a publish and subscribe event model. it is typically used between services, and utilizes event busses (such as RabbitMQ), so then services no longer need to know about each other, just the bus. The thing is tho, it is more complex than the Synchronous approach.
 
             The Message bus could be considered a monolith in and of itself. We should treet the message bus with the upmost importance, the same way we do with networking, storage, power, etc... it is recommended to have a cluster of it, multiple instaces running at the same time in case one shuts down. also, services should usually implement some kind of retry policy, in case a message fails to be sent, the service should be smart enough to retry sending it again.  
+
+PVC vs PV vs Storage Classes in Kubernets:
+a PV, or Persistent volume, is used to store data for a kubernetes cluster that is indepent of any pod, deployment, node, etc... it remains persistent for the whole cluster.
+
+a PVC, or Persistent Volume claim, is used for a specific deployment to request a persistent storage to use. the requested storage could be speicifically listed, so then it would automatically bind to that PV. or it could use Storage classes to dynamically create a PV for this claim.
+
+a Storage Class is like a template to create PVs whenever they are needed.
