@@ -80,3 +80,38 @@ a PV, or Persistent volume, is used to store data for a kubernetes cluster that 
 a PVC, or Persistent Volume claim, is used for a specific deployment to request a persistent storage to use. the requested storage could be speicifically listed, so then it would automatically bind to that PV. or it could use Storage classes to dynamically create a PV for this claim.
 
 a Storage Class is like a template to create PVs whenever they are needed.
+
+
+
+RabbitMQ: 
+    It is a Message Broker / Bus that accepts and forwards messages. These messages are sent by Producers, and received by Consumers.
+    Messages are stored in Queues, in case of failures of the bus. these queues allow some level of persistence for sent messages in case of failure.
+    It uses a protocol called AMQP.
+
+    AMQP (Advanced Message Queuing Protocol) is an open standard for messaging middleware, allowing systems to communicate by sending and receiving messages between distributed applications. It provides a set of rules for how messages should be formatted, delivered, and confirmed between systems.
+    Key Features of AMQP:
+    Message Orientation: AMQP treats data as messages, allowing systems to communicate asynchronously by sending and receiving structured data.
+    Queuing: AMQP enables queuing, ensuring that messages can be stored until the recipient is ready to process them.
+    Routing: It supports routing of messages to the appropriate destination based on various conditions, using exchanges and bindings.
+    Reliability: AMQP ensures reliable message delivery through acknowledgments and confirmations.
+    Interoperability: It is platform-independent and works across different languages and operating systems.
+
+    AMQP Components:
+        Producers: Systems or applications that create and send messages.
+        Exchanges: Intermediaries that route messages from producers to queues based on specific rules.
+        Queues: Buffers that store messages until they are delivered to the consumers.
+        Bindings: Rules that define how messages are routed from exchanges to queues.
+        Consumers: Systems or applications that receive and process messages.
+    
+    RabbitMQ allows producers to send messages to exchanges.
+    The exchange routes the message to one or more queues based on routing rules (bindings).
+    Consumers fetch or subscribe to messages from these queues, processing them asynchronously.
+
+    RabbitMQ provides message durability, allowing messages to persist in the queue even if the broker crashes, ensuring reliable message delivery over time.
+
+    Exchanges:
+        There are 4 types of Exchanges:
+            - Direct: It is ideal for unicast / single messaging, it routes messages based on a binding key, from a producer to a queues that have the same binding key that was specified in the message. 
+            - Fanout: It is used as a broadcast way to send messages, so sending the message to every queue that is bound to this exchange. so it forwards a message to all the queues that are bound to it, it ignores all routing keys.
+            - Topic: It kinda kinds the latter two. it forwards messages based on a specific 'topic' which is the routing key, as well as utilizing some wild cards. Routing keys are usually '.' seperated, for example log.info, user.signup... so we could bind queues using these keys as well as routing cards, so we could have a queue receiving all messages user related by something like this 'user.*'
+            - Header

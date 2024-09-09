@@ -12,22 +12,27 @@ namespace CommandService.Repositories
         {
 			_context = context;
 		}
-        public Task CreateCommandForPlatform(int platformId, Command command)
+        public async Task CreateCommandForPlatform(int platformId, Command command)
 		{
-			throw new NotImplementedException();
+			if (command is null)
+				throw new ArgumentNullException("Please provide a command");
+			command.PlatformId = platformId;
+			_context.Commands.Add(command);
+			await _context.SaveChangesAsync();
 		}
 
-		public Task CreatePlatform(Platform platform)
+		public async Task CreatePlatform(Platform platform)
 		{
-			throw new NotImplementedException();
+			if (platform is null)
+				throw new ArgumentNullException("Please provide a platform");
+			_context.Platforms.Add(platform);
+			await _context.SaveChangesAsync();
 		}
 
-		public Task<List<Platform>> GetAllPlatforms()
-		{
-			throw new NotImplementedException();
-		}
+		public async Task<List<Platform>> GetAllPlatforms()
+			=> await _context.Platforms.ToListAsync();
 
-		public async Task<Command?> GetCommandForPlatform(int platformId, int commandId)
+		public async Task<Command> GetCommandForPlatform(int platformId, int commandId)
 			=> await _context.Commands.FirstOrDefaultAsync(x => x.PlatformId == platformId && x.Id == commandId);
 
 		public async Task<List<Command>> GetCommandsForPlatform(int platformId)
