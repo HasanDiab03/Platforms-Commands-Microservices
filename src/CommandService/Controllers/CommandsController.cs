@@ -23,25 +23,26 @@ namespace CommandService.Controllers
         [HttpGet]
 		public async Task<IActionResult> GetCommandsForPlatform(int platformId)
 		{
-			if(!(await _commandRepository.PlatformExists(platformId)))
+			if(!await _commandRepository.PlatformExists(platformId))
 				return BadRequest("no platform with provided platform id exists");
 			return Ok(_mapper.Map<List<CommandDTO>>(await _commandRepository.GetCommandsForPlatform(platformId)));
 		}
-		[HttpGet("{commandId}")]
+		[HttpGet("{commandId}", Name = "GetCommandForPlatform")]
 		public async Task<IActionResult> GetCommandForPlatform(int platformId, int commandId)
 		{
-			if (!(await _commandRepository.PlatformExists(platformId)))
+			if (!await _commandRepository.PlatformExists(platformId))
 				return BadRequest("no platform with provided platform id exists");
 			return Ok(_mapper.Map<CommandDTO>(await _commandRepository.GetCommandForPlatform(platformId, commandId)));
 		}
 		[HttpPost]
 		public async Task<IActionResult> CreateCommandForPlatform(int platformId, CreateCommand createCommand)
 		{
-			if (!(await _commandRepository.PlatformExists(platformId)))
+			if (!await _commandRepository.PlatformExists(platformId))
 				return BadRequest("no platform with provided platform id exists");
 			if(!ModelState.IsValid)
 				return BadRequest("Command Validation failed");
-			var command = _commandRepository.CreateCommandForPlatform(platformId, _mapper.Map<Command>(createCommand));
+			var command = _mapper.Map<Command>(createCommand);
+			await _commandRepository.CreateCommandForPlatform(platformId, command);
 			var commandDto = _mapper.Map<CommandDTO>(command);
 			return CreatedAtRoute(nameof(GetCommandForPlatform), new { platformId, commandId = commandDto.Id }, commandDto);
 		}

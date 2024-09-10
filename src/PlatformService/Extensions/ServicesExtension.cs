@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.MappingProfiles;
 using PlatformService.Repositories;
@@ -30,8 +33,10 @@ namespace PlatformService.Extensions
 
 			services.AddScoped<IPlatformRepository, PlatformRepository>();
 			services.AddScoped<ICommandDataClient, HttpCommandDataClient>();
+			services.AddSingleton<IMessageBusClient, MessageBusClient>();
 			services.AddAutoMapper(typeof(MappingProfile).Assembly);
 			services.AddHttpClient();
+			services.Configure<RabbitMqConfig>(config.GetSection("RabbitMQ"));
 			return services;
 		}
 	}

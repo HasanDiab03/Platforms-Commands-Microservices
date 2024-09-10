@@ -115,3 +115,7 @@ RabbitMQ:
             - Fanout: It is used as a broadcast way to send messages, so sending the message to every queue that is bound to this exchange. so it forwards a message to all the queues that are bound to it, it ignores all routing keys.
             - Topic: It kinda kinds the latter two. it forwards messages based on a specific 'topic' which is the routing key, as well as utilizing some wild cards. Routing keys are usually '.' seperated, for example log.info, user.signup... so we could bind queues using these keys as well as routing cards, so we could have a queue receiving all messages user related by something like this 'user.*'
             - Header
+
+    Event Processor:
+        - upon getting an event, we need to determin what that event is (probably using its name), and after them we perform appropriate action according to event.
+        

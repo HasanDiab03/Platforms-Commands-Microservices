@@ -43,5 +43,7 @@ namespace CommandService.Repositories
 
 		public async Task<bool> PlatformExists(int platformId)
 			=> await _context.Platforms.FindAsync(platformId) is not null;
+		public async Task<bool> ExternalPlatformExists(int externalPlatformId)
+			=> await _context.Platforms.AnyAsync(x => x.ExternalId == externalPlatformId);
 	}
 }

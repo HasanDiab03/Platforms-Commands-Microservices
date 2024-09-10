@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\repositories\\commandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\repositories\\commandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|c:\\users\\dell\\desktop\\courses\\microservices\\src\\commandservice\\controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17C6ABCA-DD45-4EC9-B45A-05203143CA0D}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,45 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Repositories\\CommandRepository.cs",
-              "RelativeDocumentMoniker": "CommandService\\Repositories\\CommandRepository.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Repositories\\CommandRepository.cs",
-              "RelativeToolTip": "CommandService\\Repositories\\CommandRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAcwCsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T16:35:02.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommandsController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeDocumentMoniker": "CommandService\\Controllers\\CommandsController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeToolTip": "CommandService\\Controllers\\CommandsController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAAC0AAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T15:53:19.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlatformsController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\PlatformsController.cs",
-              "RelativeDocumentMoniker": "CommandService\\Controllers\\PlatformsController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\Courses\\Microservices\\src\\CommandService\\Controllers\\PlatformsController.cs",
-              "RelativeToolTip": "CommandService\\Controllers\\PlatformsController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAcAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T15:44:35.224Z",
-              "EditorCaption": ""
             }
           ]
         },

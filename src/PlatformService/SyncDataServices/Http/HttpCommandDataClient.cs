@@ -20,7 +20,7 @@ namespace PlatformService.SyncDataServices.Http
 				JsonSerializer.Serialize(platform),
 				Encoding.UTF8, 
 				"application/json");
-			var response = await _client.PostAsync($"{_config["CommandServiceIP"]}/api/c/platfroms/", payload);
+			var response = await _client.PostAsync($"{_config["CommandServiceIP"]}/api/c/platforms/", payload);
 			if (response.IsSuccessStatusCode)
 			{
 				Console.WriteLine("--> Sync POST to Command Service from Platfrom service is successfull");
