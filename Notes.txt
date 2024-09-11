@@ -119,3 +119,6 @@ RabbitMQ:
     Event Processor:
         - upon getting an event, we need to determin what that event is (probably using its name), and after them we perform appropriate action according to event.
         
+
+gRPC:
+    gRPC stands for Google Remote Procedure Call, it uses HTTP/2 Protocol to transfer binary messages, which are desiged to be lightweight and highly performant. it usually requires HTTPS / TLS. it focuses on high performance, relying on Protocol Buffers aka Protobuf, which kind defines a contract between client and server. It is frequently used to communicate between 2 services. 

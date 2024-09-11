@@ -3,6 +3,7 @@ using CommandService.Data;
 using CommandService.Events;
 using CommandService.MappingProfiles;
 using CommandService.Repositories;
+using CommandService.SyncDataServices;
 using Microsoft.EntityFrameworkCore;
 
 namespace CommandService.Extensions
@@ -22,6 +23,8 @@ namespace CommandService.Extensions
 			services.Configure<RabbitMqConfig>(config.GetSection("RabbitMq"));
 
 			services.AddHostedService<MessageBusSubscriber>();
+
+			services.AddScoped<IPlatformDataClient, PlatformDataClient>();
 
 			return services;
 		}

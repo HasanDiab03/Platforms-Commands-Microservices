@@ -37,6 +37,9 @@ namespace PlatformService.Extensions
 			services.AddAutoMapper(typeof(MappingProfile).Assembly);
 			services.AddHttpClient();
 			services.Configure<RabbitMqConfig>(config.GetSection("RabbitMQ"));
+
+			services.AddGrpc();
+
 			return services;
 		}
 	}

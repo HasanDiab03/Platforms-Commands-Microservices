@@ -40,6 +40,11 @@ spec:
   selector:
     app: platform-service
   ports:
-    - protocol: TCP
+    - name: platform-http
+      protocol: TCP
       port: 8080
       targetPort: 8080
+    - name: platform-grpc
+      protocol: TCP
+      port: 1234
+      targetPort: 1234
